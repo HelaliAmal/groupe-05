@@ -1,0 +1,16 @@
+var Film = {
+	init: function( titre , annee)
+	this.titre= titre ;
+	this.annee= annee ; 
+} ,
+decrire : function()
+    {
+        var decription = this.titre +" ( "+ this.annee ")" ; 
+        return description ; 
+        }
+         let films = [ ];
+console.log(films);
+var films = [];
+var film=object.create(film);
+film.init("Ta'and" , 2016);
+film.push(film);

@@ -1,0 +1,63 @@
+var Personnage = {
+
+    initPerso : function ( nom , sante , force )
+    {
+        this.nom=nom;
+        this.sante=sante;
+        this.force=force;
+    },
+
+    decrire : function()
+    {
+        var decription ="nom : "+this.nom+"<br>"+"sante : "+this.sante+"<br>"+"Force :"+this.force+"<br>";
+        return description;
+    }
+
+};
+
+class Joueur extends Personnage {
+       
+    initJoueur(nom,sante,force)
+    {
+        super(nom,sante,force);
+        this.XP=0;
+    }
+    
+    decrire()
+    {
+        super(decrire) + "XP :"+ this.XP;
+    }
+
+    combattre(Adversaire)
+    {return Adversaire.nom;}
+}
+
+class Adversaire extends Personnage 
+{
+    initAdversaire(nom,sante,force,race,valeur)
+    {
+        super(nom,sante,force)
+        this.race="";
+        this.valeur=0;
+    }
+}
+var perso = object.create(Personnage);
+perso.initPerso("ahmed",120,35);
+var Joueur=oblect.create(Joueur);
+J.XP=200;
+var Adv=initAdversaire("mohamed",100,38,0,0);
+
+
+let container1=document.GetElementById("container1");
+let container2=document.GetElementById("container2");
+let personne=document.GetElementById("personne");
+let Adversaire=document.GetElementById("adversaire"); 
+
+function affiche(){
+    if(personne.checked){
+        container1.innerHTML += Joueur.decrire() ;
+    }
+    else{
+        container2.innerHTML += Joueur.combattre() ;
+    }
+}
